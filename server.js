@@ -9,7 +9,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const openai = new OpenAI({
-  apiKey: "apiKey: process.env.OPENAI_API_KEY"
+  apiKey: process.env.OPENAI_API_KEY
+});
 
 app.post("/whatsapp", async (req, res) => {
   try {
